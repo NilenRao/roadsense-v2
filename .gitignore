@@ -1,0 +1,13 @@
+__pycache__/
+# Raw FixMyStreet pull has free-text descriptions (can contain names/house numbers): keep local only
+data/fms_raw.csv
+# Raw API pulls (free text) stay local
+data/raw/
+.venv/
+# API keys: commit .env.example only
+.env
+# Daily refresh builds (roadsense.refresh): never commit refreshed data
+data/live/
+# Street Manager works for both cities (38 MB): rebuild with python -m roadsense.ingest.streetworks;
+# the segment-linked copy data/processed/works_segments.parquet is committed
+data/processed/street_works.csv

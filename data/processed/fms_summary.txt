@@ -1,0 +1,58 @@
+Built 2026-10-17T12:53 from FixMyStreet Open311 (raw rows: 9246)
+city         road-surface  pavement-removed  labels  in-window  street-lighting
+Southampton          3266                64    3202        997              211
+Portsmouth            333                12     321        277                0
+Brighton             1807               203    1604       1574                0
+Labels by year:
+  Brighton     2008: 5
+  Brighton     2009: 6
+  Brighton     2010: 25
+  Brighton     2011: 25
+  Brighton     2012: 17
+  Brighton     2013: 28
+  Brighton     2014: 33
+  Brighton     2015: 42
+  Brighton     2016: 59
+  Brighton     2017: 34
+  Brighton     2018: 92
+  Brighton     2019: 73
+  Brighton     2020: 114
+  Brighton     2021: 81
+  Brighton     2022: 121
+  Brighton     2023: 300
+  Brighton     2024: 295
+  Brighton     2025: 224
+  Brighton     2026: 30
+  Portsmouth   2009: 6
+  Portsmouth   2010: 18
+  Portsmouth   2011: 14
+  Portsmouth   2012: 5
+  Portsmouth   2013: 12
+  Portsmouth   2014: 9
+  Portsmouth   2015: 9
+  Portsmouth   2017: 5
+  Portsmouth   2018: 14
+  Portsmouth   2019: 13
+  Portsmouth   2020: 10
+  Portsmouth   2021: 20
+  Portsmouth   2022: 14
+  Portsmouth   2023: 69
+  Portsmouth   2024: 40
+  Portsmouth   2025: 19
+  Portsmouth   2026: 44
+  Southampton  2008: 14
+  Southampton  2009: 50
+  Southampton  2010: 66
+  Southampton  2011: 133
+  Southampton  2012: 396
+  Southampton  2013: 752
+  Southampton  2014: 721
+  Southampton  2015: 161
+  Southampton  2016: 219
+  Southampton  2017: 224
+  Southampton  2018: 263
+  Southampton  2019: 130
+  Southampton  2023: 6
+  Southampton  2024: 22
+  Southampton  2025: 10
+  Southampton  2026: 35

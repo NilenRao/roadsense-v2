@@ -1,0 +1,92 @@
+[
+ {
+  "name": "OpenStreetMap",
+  "label": "Road network, bus stops and bus routes: \u00a9 OpenStreetMap contributors (ODbL)",
+  "used_for": "road segments, bus stops, bus routes, junctions",
+  "licence": "ODbL 1.0",
+  "retrieved_at": "2026-10-17T12:03+00:00",
+  "data_date": "2026-10-17",
+  "is_synthetic": false
+ },
+ {
+  "name": "MapIt (mySociety) ward boundaries",
+  "label": "Ward boundaries: MapIt / ONS, contains OS data \u00a9 Crown copyright (OGL)",
+  "used_for": "wards, coverage check",
+  "licence": "OGL v3",
+  "retrieved_at": "2026-10-17T12:06+00:00",
+  "data_date": "May 2023 ward boundaries",
+  "is_synthetic": false
+ },
+ {
+  "name": "ONS Open Geography Portal ward boundaries",
+  "label": "Portsmouth ward boundaries: ONS, contains OS data \u00a9 Crown copyright (OGL)",
+  "used_for": "Portsmouth wards (MapIt quota reached), coverage check",
+  "licence": "OGL v3",
+  "retrieved_at": "2026-10-17T15:05+00:00",
+  "data_date": "December 2024 ward boundaries",
+  "is_synthetic": false
+ },
+ {
+  "name": "DfT road traffic statistics",
+  "label": "Traffic counts: Department for Transport, AADF to 2025 (OGL)",
+  "used_for": "HGV and bus load (esal_day)",
+  "licence": "OGL v3",
+  "retrieved_at": "2026-10-17T12:22+00:00",
+  "data_date": "count years up to 2025",
+  "is_synthetic": false
+ },
+ {
+  "name": "Open-Meteo",
+  "label": "Weather: Open-Meteo.com (CC BY 4.0), historical + 16-day forecast",
+  "used_for": "rain, freeze-thaw, rain-then-frost, forecast weeks",
+  "licence": "CC BY 4.0 (free tier, non-commercial)",
+  "retrieved_at": "2026-10-17T12:36+00:00",
+  "data_date": "2026-11-01 23:00",
+  "is_synthetic": false
+ },
+ {
+  "name": "Environment Agency Flood Map for Planning",
+  "label": "Flood Zone 3: Environment Agency (OGL)",
+  "used_for": "in_flood_area",
+  "licence": "OGL v3",
+  "retrieved_at": "2026-10-17T12:45+00:00",
+  "data_date": "2026-10-17",
+  "is_synthetic": false
+ },
+ {
+  "name": "FixMyStreet (mySociety)",
+  "label": "Pothole reports: FixMyStreet.com (mySociety), via its public Open311 API",
+  "used_for": "real labels, live report layer, triage",
+  "licence": "public reports; credit mySociety (check fixmystreet.com terms)",
+  "retrieved_at": "2026-10-17T11:00+00:00",
+  "data_date": "2026-09-05",
+  "is_synthetic": false
+ },
+ {
+  "name": "DfT Street Manager",
+  "label": "Street works: DfT Street Manager open data (OGL)",
+  "used_for": "utility and highway digs per road (risk model input, road card)",
+  "licence": "OGL v3",
+  "retrieved_at": "2026-10-18T03:00+00:00",
+  "data_date": "2026-09-30",
+  "is_synthetic": false
+ },
+ {
+  "name": "Brownfield land registers",
+  "label": "Building sites: brownfield land registers via planning.data.gov.uk (OGL)",
+  "used_for": "building sites near each road (risk model input, map, road card)",
+  "licence": "OGL v3",
+  "retrieved_at": "2026-10-18T02:58+00:00",
+  "data_date": "2026-10-18",
+  "is_synthetic": false
+ },
+ {
+  "name": "OpenStreetMap construction sites",
+  "label": "Building sites: OpenStreetMap landuse=construction (ODbL)",
+  "used_for": "building sites active now (map and road card)",
+  "licence": "ODbL 1.0",
+  "retrieved_at": "2026-10-18T03:00+00:00",
+  "data_date": "2026-10-18",
+  "is_synthetic": false
+ }
+]

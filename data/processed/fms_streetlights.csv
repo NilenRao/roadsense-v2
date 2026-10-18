@@ -1,0 +1,212 @@
+city,id,category,requested,updated,status,lat,lon,title
+Southampton,30035,Street lighting,2008-09-09T13:20:56+01:00,2008-09-16T13:29:13+01:00,closed,50.936371,-1.453372,Light out
+Southampton,37295,Street lighting,2008-12-13T17:59:47+00:00,2008-12-13T18:00:02+00:00,open,50.930464,-1.447885,Street light not working
+Southampton,39690,Street lighting,2009-01-10T08:20:43+00:00,2009-02-09T17:12:28+00:00,closed,50.941893,-1.3955,Four lights not working
+Southampton,43284,Street lighting,2009-02-07T19:47:07+00:00,2009-04-05T22:44:58+01:00,open,50.898026,-1.405125,No street lighting
+Southampton,45005,Street lighting,2009-02-18T10:10:26+00:00,2009-02-18T10:15:02+00:00,open,50.936007,-1.40014,Light out on footpath Highfield Lane to Burgess Road (F16)
+Southampton,45006,Street lighting,2009-02-18T10:12:41+00:00,2009-02-18T10:15:03+00:00,open,50.937773,-1.399313,Street light out on Burgess Road nr Uni
+Southampton,45609,Street lighting,2009-02-22T15:18:56+00:00,2009-05-02T14:08:24+01:00,closed,50.917568,-1.374803,Reported november o8 january o9
+Southampton,46699,Street lighting,2009-03-01T17:41:01+00:00,2009-03-29T18:11:12+01:00,closed,50.931865,-1.3631,Street Lamps not working
+Southampton,50058,Street lighting,2009-03-22T21:56:41+00:00,2009-03-22T22:00:03+00:00,open,50.913451,-1.441311,Street light failed
+Southampton,50786,Street lighting,2009-03-26T23:21:47+00:00,2010-05-08T11:31:36+01:00,closed,50.911389,-1.370632,Anti social behaviour due to lack of lighting
+Southampton,54070,Street lighting,2009-04-17T11:15:24+01:00,2009-06-12T18:56:58+01:00,closed,50.888404,-1.364701,Not worked since replaced
+Southampton,57434,Street lighting,2009-05-10T21:47:45+01:00,2009-06-07T22:45:48+01:00,closed,50.916989,-1.419815,Inoperative street light
+Southampton,63429,Street lighting,2009-06-29T17:58:10+01:00,2009-07-27T18:28:23+01:00,closed,50.912841,-1.369764,Lamp not working
+Southampton,74245,Street lighting,2009-09-23T14:40:08+01:00,2009-10-21T16:41:11+01:00,closed,50.912474,-1.356925,Street light not working
+Southampton,75287,Street lighting,2009-10-01T10:41:18+01:00,2009-10-01T10:45:02+01:00,open,50.883202,-1.365127,Lamp FL9 not working 
+Southampton,75488,Street lighting,2009-10-03T12:00:24+01:00,2009-10-31T16:26:08+00:00,open,50.913373,-1.354239,Street light
+Southampton,77073,Street lighting,2009-10-17T10:46:44+01:00,2009-10-17T10:50:02+01:00,open,50.902119,-1.362747,Not working light out
+Southampton,77217,Street lighting,2009-10-19T10:35:17+01:00,2009-10-19T10:40:02+01:00,open,50.88905,-1.357807,Street lamp
+Southampton,78340,Street lighting,2009-10-29T18:06:22+00:00,2009-11-26T18:33:07+00:00,open,50.894145,-1.379243,Street light not working
+Southampton,81881,Street lighting,2009-11-30T18:01:49+00:00,2009-11-30T18:05:04+00:00,open,50.908925,-1.38723,Street Light Not Working
+Southampton,82421,Street lighting,2009-12-04T15:36:02+00:00,2009-12-04T15:40:02+00:00,open,50.926706,-1.434557,Broken street light
+Southampton,89854,Street lighting,2010-01-21T11:28:29+00:00,2010-02-18T13:58:19+00:00,closed,50.93577,-1.45544,Light out
+Southampton,94567,Street lighting,2010-02-08T17:31:26+00:00,2010-05-08T11:34:58+01:00,closed,50.933056,-1.445378,Broken street lights
+Southampton,116013,Street lighting,2010-05-25T22:04:43+01:00,2010-10-29T18:15:17+01:00,closed,50.89965,-1.377247,Defective
+Southampton,116229,Street lighting,2010-05-27T13:08:36+01:00,2010-06-22T12:15:16+01:00,closed,50.936015,-1.455356,Light out
+Southampton,116231,Street lighting,2010-05-27T16:21:55+01:00,2010-06-22T12:13:11+01:00,closed,50.937112,-1.453084,Light out
+Southampton,123093,Street lighting,2010-07-05T22:58:29+01:00,2010-09-01T00:03:59+01:00,open,50.925207,-1.440014,Street light out
+Southampton,129945,Street lighting,2010-08-21T17:59:10+01:00,2010-08-21T18:00:13+01:00,open,50.935068,-1.409563,Lamps need attention
+Southampton,135916,Street lighting,2010-09-30T22:33:40+01:00,2010-10-29T22:35:21+01:00,closed,50.898853,-1.346599,Street lighting
+Southampton,139900,Street lighting,2010-10-26T23:07:59+01:00,2010-11-24T13:23:42+00:00,closed,50.914826,-1.418482,Street lamp hanging down
+Southampton,156610,Street lighting,2011-01-19T10:20:43+00:00,2011-01-19T10:25:02+00:00,open,50.921151,-1.375666,Street light [number] is always on
+Southampton,158887,Street lighting,2011-01-25T14:14:24+00:00,2011-11-07T14:13:41+00:00,open,50.892374,-1.355519,Lamp Posts not Working
+Southampton,167278,Street lighting,2011-02-21T17:49:12+00:00,2011-02-21T17:50:01+00:00,open,50.910116,-1.404616,Titanic Memorial
+Southampton,175124,Street lighting,2011-03-22T22:42:25+00:00,2011-03-22T22:45:01+00:00,open,50.933289,-1.460497,Streetlamp light out
+Southampton,175906,Street lighting,2011-03-26T19:24:02+00:00,2011-03-26T19:25:01+00:00,open,50.942814,-1.403259,Street lights
+Southampton,176187,Street lighting,2011-03-28T13:06:41+01:00,2011-04-26T11:38:27+01:00,closed,50.917106,-1.415836,Lamppost has exposed wiring
+Southampton,188891,Street lighting,2011-06-10T22:30:00+01:00,2011-09-23T13:07:10+01:00,closed,50.917731,-1.400806,Faliure 
+Southampton,192951,Street lighting,2011-07-07T14:18:23+01:00,2012-10-11T16:35:15+01:00,closed,50.909669,-1.400584,There Is A Light That Never Goes Out
+Southampton,202007,Street lighting,2011-09-08T19:22:07+01:00,2011-09-09T09:18:20+01:00,open,50.921477,-1.368974,Street lights
+Southampton,206921,Street lighting,2011-10-10T21:44:19+01:00,2011-10-11T11:20:11+01:00,closed,50.898854,-1.346561,Street Lighting
+Southampton,208386,Street lighting,2011-10-19T21:12:38+01:00,2011-11-17T11:06:11+00:00,open,50.915037,-1.412129,Street Light is out
+Southampton,210656,Street lighting,2011-11-01T18:50:29+00:00,2011-11-02T16:22:14+00:00,closed,50.896514,-1.34506,Street lights not working
+Southampton,212044,Street lighting,2011-11-07T14:23:14+00:00,2011-11-07T14:34:35+00:00,closed,50.892767,-1.356104,Street Lighting
+Southampton,216637,Street lighting,2011-12-05T10:58:38+00:00,2011-12-05T11:32:04+00:00,closed,50.936155,-1.454225,Street Lights
+Southampton,216887,Street lighting,2011-12-06T16:12:16+00:00,2011-12-06T16:15:13+00:00,open,50.897851,-1.390972,Street Lamp Defective
+Southampton,218230,Street lighting,2011-12-14T13:10:00+00:00,2012-01-14T14:27:05+00:00,closed,50.928906,-1.383847,Street lights not working
+Southampton,221467,Street lighting,2012-01-03T09:18:10+00:00,2012-01-03T09:32:34+00:00,closed,50.945784,-1.44792,Faulty lamp post
+Southampton,222511,Street lighting,2012-01-06T14:04:08+00:00,2017-09-08T11:41:39+01:00,closed,50.935428,-1.461175,Lighting
+Southampton,221934,Street lighting,2012-01-06T20:12:59+00:00,2012-01-09T10:10:07+00:00,closed,50.938466,-1.41427,"Lighting, street light damaged"
+Southampton,222675,Street lighting,2012-01-06T23:20:26+00:00,2012-01-22T20:51:59+00:00,closed,50.932845,-1.459234,Street light still not working
+Southampton,225259,Street lighting,2012-01-17T18:55:33+00:00,2012-01-19T09:41:33+00:00,closed,50.922375,-1.358244,Street light not working
+Southampton,227023,Street lighting,2012-01-24T22:20:23+00:00,2012-01-27T14:26:13+00:00,closed,50.902844,-1.405156,Street lights not working
+Southampton,228738,Street lighting,2012-01-31T14:08:04+00:00,2012-01-31T15:21:51+00:00,closed,50.93217,-1.447614,Faulty Street Light
+Southampton,244892,Street lighting,2012-04-13T22:16:05+01:00,2012-04-21T11:27:26+01:00,closed,50.907769,-1.398482,"Lighting, street light out / flickering"
+Southampton,254328,Street lighting,2012-05-30T13:22:44+01:00,2012-05-31T13:57:22+01:00,closed,50.92912,-1.363113,Street light not working
+Southampton,259823,Street lighting,2012-06-23T11:47:53+01:00,2012-06-23T11:50:09+01:00,open,50.902637,-1.398081,Test
+Southampton,259836,Street lighting,2012-06-23T13:05:32+01:00,2012-06-23T13:10:08+01:00,open,50.926391,-1.398544,Test
+Southampton,262214,Street lighting,2012-07-03T08:09:02+01:00,2012-07-03T11:04:56+01:00,closed,50.900778,-1.349627,[name]
+Southampton,263265,Street lighting,2012-07-07T10:16:40+01:00,2012-07-07T10:28:09+01:00,closed,50.92889,-1.436079,Street lighting
+Southampton,264629,Street lighting,2012-07-11T21:52:51+01:00,2012-07-12T16:18:02+01:00,closed,50.942301,-1.375677,Railway overheight bridge sign
+Southampton,265121,Street lighting,2012-07-13T20:34:10+01:00,2012-07-14T10:14:23+01:00,closed,50.897097,-1.344418,6 street lights not working
+Southampton,265917,Street lighting,2012-07-17T11:01:32+01:00,2012-07-17T11:07:24+01:00,closed,50.919166,-1.429416,Test
+Southampton,269756,Street lighting,2012-08-04T11:51:20+01:00,2012-08-04T11:52:45+01:00,closed,50.915426,-1.430886,Test
+Southampton,273693,Street lighting,2012-08-23T13:41:00+01:00,2012-08-31T10:44:45+01:00,closed,50.936114,-1.454118,Street light out
+Southampton,276502,Street lighting,2012-09-06T16:16:14+01:00,2012-09-06T17:21:54+01:00,closed,50.89784,-1.388136,"Light No. [number] Asturius Way, Close to [number] Andes Close"
+Southampton,280183,Street lighting,2012-09-25T22:56:32+01:00,2012-10-24T10:59:21+01:00,closed,50.936688,-1.440851,Streetlight number out
+Southampton,284752,Street lighting,2012-10-17T22:12:04+01:00,2012-11-15T22:23:28+00:00,closed,50.935952,-1.400195,Puddle of darkness
+Southampton,297539,Street lighting,2012-12-12T00:16:16+00:00,2013-01-09T14:48:27+00:00,closed,50.940331,-1.445022,Vandalised Street Light.
+Southampton,298959,Street lighting,2012-12-18T10:37:43+00:00,2012-12-18T10:53:18+00:00,closed,50.909121,-1.332064,Street lights out
+Southampton,300137,Street lighting,2012-12-21T20:09:56+00:00,2012-12-22T10:27:51+00:00,closed,50.917618,-1.403437,Street lights along the Avenue don't work
+Southampton,303829,Street lighting,2013-01-02T20:36:39+00:00,2013-01-31T15:33:14+00:00,closed,50.94023,-1.445043,Street Light NOT WORKING
+Southampton,323662,Street lighting,2013-02-17T17:46:42+00:00,2013-02-18T10:44:11+00:00,closed,50.911561,-1.330701,New streetlight not working
+Southampton,324829,Street lighting,2013-02-19T20:57:52+00:00,2013-03-01T13:14:42+00:00,closed,50.913845,-1.448259,Street ligts
+Southampton,344269,Street lighting,2013-04-06T20:48:50+01:00,2013-04-06T20:50:09+01:00,open,50.909342,-1.403144,Street lights not working!
+Southampton,398983,Street lighting,2013-10-31T15:14:52+00:00,2013-10-31T17:15:21+00:00,closed,50.89581,-1.374909,Broken and dangerous street lamp
+Southampton,403324,Street lighting,2013-11-14T10:59:16+00:00,2014-01-16T16:35:48+00:00,closed,50.923992,-1.404712,Lamp post repaint and sign replacement request
+Southampton,409759,Street lighting,2013-12-07T18:29:46+00:00,2014-01-08T18:35:55+00:00,open,50.914231,-1.398956,Street light not working
+Southampton,415564,Street lighting,2013-12-30T15:58:11+00:00,2013-12-31T10:43:28+00:00,closed,50.922601,-1.375974,Raw sewerage
+Southampton,418493,Street lighting,2014-01-06T18:03:14+00:00,2014-01-27T19:30:24+00:00,closed,50.909898,-1.350953,New Street Lights
+Southampton,429303,Street lighting,2014-01-28T00:51:22+00:00,2014-03-25T16:22:43+00:00,open,50.909708,-1.351232,Street lights
+Southampton,429304,Street lighting,2014-01-28T00:52:03+00:00,2024-04-17T21:15:35+01:00,closed,50.909708,-1.351232,Street lights
+Southampton,432104,Street lighting,2014-02-01T23:03:26+00:00,2014-02-01T23:20:27+00:00,open,50.89878,-1.391938,Lighting to dim.
+Southampton,436748,Street lighting,2014-02-09T10:52:04+00:00,2014-03-09T21:46:16+00:00,closed,50.935851,-1.400294,Snapped lampost
+Southampton,444206,Street lighting,2014-02-22T08:03:24+00:00,2014-02-24T12:08:15+00:00,closed,50.899565,-1.337755,Street light not working
+Southampton,483460,Street lighting,2014-06-05T10:55:45+01:00,2014-06-05T11:00:16+01:00,open,50.918654,-1.373448,Lights Out
+Southampton,490833,Street lighting,2014-06-19T17:25:44+01:00,2014-07-31T21:49:57+01:00,open,50.900827,-1.36044,New street lighting
+Southampton,502475,Street lighting,2014-07-19T11:18:24+01:00,2014-07-19T11:20:11+01:00,open,50.894036,-1.394679,Dangerous fallen lamp post
+Southampton,510645,Street lighting,2014-08-09T16:53:23+01:00,2014-08-09T16:55:16+01:00,open,50.915522,-1.4045,Broken floor lamp
+Southampton,522108,Street lighting,2014-09-12T21:07:45+01:00,2014-09-12T21:10:12+01:00,open,50.933496,-1.362309,Street lamp
+Southampton,523832,Street lighting,2014-09-17T20:17:48+01:00,2015-02-27T22:12:56+00:00,open,50.937395,-1.445583,Street lamp
+Southampton,524530,Street lighting,2014-09-19T22:43:53+01:00,2014-10-19T19:08:04+01:00,closed,50.914275,-1.398956,Lighting
+Southampton,526979,Street lighting,2014-09-28T21:18:33+01:00,2014-10-01T12:43:33+01:00,open,50.899977,-1.370043,"Street light across the road too bright in bedroom at night, even with blackout blind"
+Southampton,531953,Street lighting,2014-10-12T13:14:36+01:00,2015-01-30T09:30:33+00:00,closed,50.941902,-1.395425,Exposed cable
+Southampton,540422,Street lighting,2014-11-03T14:29:03+00:00,2016-02-03T11:02:48+00:00,open,50.907405,-1.365783,Streetlighting lense unclipped and hanging off
+Southampton,551704,Street lighting,2014-11-29T21:04:17+00:00,2014-12-30T18:46:27+00:00,closed,50.90924,-1.402747,Lighting
+Southampton,557990,Street lighting,2014-12-16T18:55:22+00:00,2015-02-13T12:25:42+00:00,closed,50.898254,-1.377911,Street lights out
+Southampton,558063,Street lighting,2014-12-16T22:41:40+00:00,2014-12-16T22:45:12+00:00,open,50.953082,-1.404117,Lack of lighting
+Southampton,558493,Street lighting,2014-12-17T23:49:04+00:00,2015-01-15T08:28:42+00:00,closed,50.933126,-1.460393,Street light out
+Southampton,559500,Street lighting,2014-12-20T17:54:47+00:00,2014-12-22T16:31:27+00:00,open,50.941054,-1.379892,Street light bulb failed
+Southampton,572184,Street lighting,2015-01-19T01:24:55+00:00,2015-02-16T09:51:15+00:00,closed,50.907821,-1.415358,Lighting
+Southampton,572772,Street lighting,2015-01-19T21:13:56+00:00,2015-02-19T20:59:13+00:00,closed,50.927398,-1.404624,Very old streetlight in need of replacement
+Southampton,580645,Street lighting,2015-02-02T18:08:08+00:00,2015-02-02T18:11:01+00:00,open,50.914275,-1.398913,Street light not working
+Southampton,584815,Street lighting,2015-02-10T09:29:16+00:00,2015-03-10T10:09:49+00:00,closed,50.912126,-1.353613,New Street Light outside bedroom window
+Southampton,588421,Street lighting,2015-02-16T14:06:34+00:00,2015-03-03T22:46:25+00:00,open,50.910708,-1.350224,New Street lights junction Bursledon & Upper Deacon Roads
+Southampton,627214,Street lighting,2015-04-27T22:36:23+01:00,2015-04-27T22:40:11+01:00,open,50.933343,-1.4577,Street Light Out Athersfield Rd
+Southampton,629942,Street lighting,2015-05-05T13:27:24+01:00,2015-05-08T10:47:45+01:00,open,50.913942,-1.395716,Lighting issues and trees
+Southampton,657853,Street lighting,2015-07-06T13:39:07+01:00,2015-07-06T13:40:17+01:00,open,50.933478,-1.45903,"Street Light Out,(A Week Now)."
+Southampton,664655,Street lighting,2015-07-20T19:54:39+01:00,2015-07-25T20:10:55+01:00,open,50.942381,-1.436464,Non working light
+Southampton,667155,Street lighting,2015-07-28T15:16:13+01:00,2015-07-29T17:23:06+01:00,open,50.906941,-1.405711,The Bus signal outside Greggs in the City Center is not working
+Southampton,687519,Street lighting,2015-09-10T08:50:26+01:00,2015-10-08T09:54:24+01:00,closed,50.944121,-1.373401,A335 standard 63 light unit hanging off.
+Southampton,694404,Street lighting,2015-09-25T23:00:09+01:00,2015-10-24T00:20:47+01:00,open,50.909788,-1.350867,Lamp [number] St Aubins Avenue
+Southampton,701188,Street lighting,2015-10-11T23:19:27+01:00,2015-11-09T08:54:20+00:00,open,50.909863,-1.350824,Lamp [number] St Aubins Avenue still not fixed after two weeks
+Southampton,704559,Street lighting,2015-10-19T17:17:21+01:00,2015-10-23T14:40:01+01:00,open,50.939119,-1.434119,To dark
+Southampton,709540,Street lighting,2015-10-31T20:27:54+00:00,2015-10-31T20:30:22+00:00,open,50.890059,-1.379707,Trees blocking street lights
+Southampton,710699,Street lighting,2015-11-03T13:06:41+00:00,2015-12-02T07:46:38+00:00,closed,50.922898,-1.405632,No lighting 5pm causing hazard to pedestrians
+Southampton,711294,Street lighting,2015-11-04T16:59:00+00:00,2015-12-02T17:57:31+00:00,closed,50.900659,-1.356204,Street Light Not Working outside [number] [postcode]
+Southampton,720626,Street lighting,2015-11-25T12:59:54+00:00,2015-12-02T11:40:26+00:00,closed,50.900436,-1.400801,Dead streetlight
+Southampton,721063,Street lighting,2015-11-26T10:12:38+00:00,2015-12-24T10:54:16+00:00,open,50.909924,-1.350739,Lamps [number] St Aubins Avenue
+Southampton,721152,Street lighting,2015-11-26T12:40:56+00:00,2015-12-02T11:41:05+00:00,closed,50.900367,-1.40113,Several dead streetlights
+Southampton,723759,Street lighting,2015-12-02T11:43:00+00:00,2015-12-03T15:45:08+00:00,open,50.898672,-1.389607,Dead street lamp
+Southampton,727691,Street lighting,2015-12-11T07:34:36+00:00,2016-03-23T11:37:58+00:00,closed,50.927385,-1.372434,Street light not working.
+Southampton,733106,Street lighting,2015-12-22T18:31:28+00:00,2015-12-24T11:51:02+00:00,open,50.942779,-1.451116,Lamp out
+Southampton,741817,Street lighting,2016-01-09T00:14:25+00:00,2016-01-09T00:15:19+00:00,open,50.94048,-1.456064,Lighting between the flats and row of houses between Marlin road and Fairisle road.
+Southampton,741816,Street lighting,2016-01-09T00:14:39+00:00,2016-02-06T04:12:14+00:00,open,50.94048,-1.456064,Lighting between the flats and row of houses between Marlin road and Fairisle road.
+Southampton,755155,Street lighting,2016-01-28T10:04:39+00:00,2018-06-16T13:15:31+01:00,closed,50.906285,-1.369922,Light pollution
+Southampton,761492,Street lighting,2016-02-05T18:19:47+00:00,2016-03-04T22:10:56+00:00,open,50.934172,-1.37464,Unsafe car park
+Southampton,762084,Street lighting,2016-02-06T19:57:07+00:00,2016-02-06T20:00:27+00:00,open,50.923553,-1.348903,None of the street lts are working
+Southampton,762596,Street lighting,2016-02-07T19:02:18+00:00,2016-03-07T07:26:34+00:00,open,50.926354,-1.427716,Street light in park side of churchyard park not working. It's a new light put in last year and hasn't worked for a few months new light ipark
+Southampton,765896,Street lighting,2016-02-11T15:48:12+00:00,2016-02-13T13:27:52+00:00,open,50.931305,-1.468923,All street lights are out. Public footpath from test park sports ground to holy family school.
+Southampton,770017,Street lighting,2016-02-17T21:58:19+00:00,2016-03-26T09:49:18+00:00,open,50.894226,-1.392142,Lighting On and Off - not working properly
+Southampton,777098,Street lighting,2016-02-28T13:25:20+00:00,2016-03-01T15:15:23+00:00,open,50.942877,-1.41823,Several street lights not working
+Southampton,777949,Street lighting,2016-02-29T16:44:32+00:00,2016-03-28T17:15:50+01:00,closed,50.91358,-1.444839,The street lights are out along Millbrook Road West
+Southampton,782871,Street lighting,2016-03-07T17:20:58+00:00,2016-04-04T18:02:41+01:00,closed,50.939081,-1.443686,Street light number [number] on entering field has been vandalised.
+Southampton,791133,Street lighting,2016-03-19T16:13:20+00:00,2016-03-19T16:15:15+00:00,open,50.901388,-1.324052,Chipped paint on street lighting
+Southampton,791917,Street lighting,2016-03-20T22:56:51+00:00,2016-03-20T23:00:40+00:00,open,50.931277,-1.460587,Lamp post nit workng OAP flats
+Southampton,802486,Street lighting,2016-04-05T10:46:08+01:00,2016-05-03T11:04:48+01:00,closed,50.908645,-1.391386,Subway lighting not working
+Southampton,817216,Street lighting,2016-04-30T11:19:18+01:00,2016-05-05T12:20:25+01:00,open,50.931066,-1.460297,Pensioner asked me to report that all lights are out canvey court
+Southampton,857285,Street lighting,2016-07-10T23:20:35+01:00,2016-08-08T07:21:34+01:00,closed,50.933662,-1.362251,Light outside no [number] not working
+Southampton,869979,Street lighting,2016-07-31T20:45:50+01:00,2016-08-28T21:12:11+01:00,open,50.918105,-1.33734,Street light not working
+Southampton,893448,Street lighting,2016-09-09T20:22:45+01:00,2016-09-09T20:25:11+01:00,open,50.91988,-1.420471,Streetlight out
+Southampton,895550,Street lighting,2016-09-13T23:06:45+01:00,2016-09-13T23:10:11+01:00,open,50.919569,-1.390231,Light has gone out near corner of Empress Road/Horseshoe Bridge
+Southampton,895688,Street lighting,2016-09-14T09:29:02+01:00,2016-12-09T19:48:48+00:00,open,50.941981,-1.450361,Lamp broken
+Southampton,905018,Street lighting,2016-09-30T15:17:05+01:00,2016-10-08T11:37:15+01:00,closed,50.924332,-1.376983,Street light no [number] not working
+Southampton,910093,Street lighting,2016-10-10T14:47:34+01:00,2016-10-10T14:50:11+01:00,open,50.903626,-1.375276,Trees blocking out lights
+Southampton,911730,Street lighting,2016-10-13T16:10:26+01:00,2017-10-19T09:07:14+01:00,open,50.901741,-1.397745,Lighting in subway 50% failed
+Southampton,917448,Street lighting,2016-10-25T20:22:32+01:00,2016-11-22T21:30:22+00:00,open,50.952512,-1.407866,Street lights not working for weeks
+Southampton,922652,Street lighting,2016-11-04T14:17:49+00:00,2016-11-04T14:20:11+00:00,open,50.943515,-1.431297,Light out on foot path
+Southampton,922947,Street lighting,2016-11-05T12:44:38+00:00,2016-12-19T17:45:58+00:00,open,50.917207,-1.359422,Lamp/ control gear replacement URGENT
+Southampton,926146,Street lighting,2016-11-12T18:53:57+00:00,2016-11-12T18:55:11+00:00,open,50.952411,-1.407957,Street lights out AGAIN
+Southampton,926153,Street lighting,2016-11-12T19:35:42+00:00,2016-11-12T19:40:12+00:00,open,50.923081,-1.468547,Street light broken
+Southampton,928939,Street lighting,2016-11-18T10:43:13+00:00,2016-11-18T10:45:11+00:00,open,50.914056,-1.400995,Subway light smashed and glass on subway floor
+Southampton,929647,Street lighting,2016-11-20T08:15:34+00:00,2016-11-20T08:20:17+00:00,open,50.916002,-1.426169,Not enough lights on this road!
+Southampton,934373,Street lighting,2016-11-28T21:01:55+00:00,2016-11-28T21:05:12+00:00,open,50.952298,-1.407946,Street lights not working
+Southampton,934996,Street lighting,2016-11-30T05:49:22+00:00,2016-11-30T05:50:10+00:00,open,50.952528,-1.407694,Street lights still not working
+Southampton,935520,Street lighting,2016-11-30T21:08:16+00:00,2016-12-16T11:07:17+00:00,closed,50.899921,-1.393766,Faulty lighting on Chantry Road footbridge.
+Southampton,935995,Street lighting,2016-12-01T21:35:17+00:00,2016-12-01T21:40:26+00:00,open,50.952329,-1.407973,Street lights not working
+Southampton,938251,Street lighting,2016-12-07T06:55:02+00:00,2016-12-07T07:00:11+00:00,open,50.90614,-1.410787,Street lighting not working
+Southampton,939210,Street lighting,2016-12-08T15:38:33+00:00,2017-02-02T16:35:59+00:00,open,50.921825,-1.45417,Lighting gone on cutway
+Southampton,965405,Street lighting,2017-01-25T10:49:44+00:00,2017-04-19T22:35:36+01:00,open,50.943912,-1.386097,Invasion of light
+Southampton,966198,Street lighting,2017-01-26T11:56:50+00:00,2017-02-24T10:47:48+00:00,closed,50.914153,-1.401232,Subway unlit
+Southampton,967377,Street lighting,2017-01-28T15:10:56+00:00,2017-02-25T15:32:06+00:00,closed,50.941964,-1.450385,Light in underpass has become detached
+Southampton,1008040,Street lighting,2017-03-22T16:12:39+00:00,2017-10-02T10:57:07+01:00,closed,50.937936,-1.45446,Damaged lighting
+Southampton,1009971,Street lighting,2017-03-25T21:17:37+00:00,2017-03-25T21:20:29+00:00,open,50.933754,-1.362275,All street lights out
+Southampton,1010016,Street lighting,2017-03-26T02:07:13+01:00,2017-03-26T02:10:17+01:00,open,50.94441,-1.401865,Street lighting very dim for some reason
+Southampton,1019342,Street lighting,2017-04-10T03:13:25+01:00,2017-09-25T12:04:42+01:00,open,50.901839,-1.397522,Failed/inadequate lighting in subway
+Southampton,1094060,Street lighting,2017-08-21T22:39:48+01:00,2018-03-24T10:23:37+00:00,closed,50.912268,-1.401118,Street light bulb has gone
+Southampton,1096764,Street lighting,2017-08-25T22:53:28+01:00,2017-09-23T08:20:39+01:00,closed,50.935478,-1.460907,Street light not working No [number]
+Southampton,1120131,Street lighting,2017-10-04T21:37:37+01:00,2017-12-05T15:16:07+00:00,closed,50.937551,-1.452529,"Street lights No,s 4/5/7/8/9 not working since 27/07/2017 still not working"
+Southampton,1131601,Street lighting,2017-10-23T19:45:47+01:00,2017-10-23T19:50:35+01:00,open,50.896256,-1.392846,Several street lights not functioning
+Southampton,1138327,Street lighting,2017-11-03T15:25:37+00:00,2018-02-14T14:45:54+00:00,closed,50.943236,-1.449017,Street lights not working on Lord's Hill Way
+Southampton,1144343,Street lighting,2017-11-14T18:11:10+00:00,2017-11-21T09:17:02+00:00,open,50.922743,-1.37596,Faulty Street light
+Southampton,1148633,Street lighting,2017-11-21T17:39:53+00:00,2018-01-29T20:58:11+00:00,closed,50.943814,-1.446062,Street lights not working
+Southampton,1193039,Street lighting,2018-01-23T17:01:20+00:00,2019-09-18T11:03:16+01:00,open,50.937067,-1.398096,Lamp standards falling over?
+Southampton,1211820,Street lighting,2018-02-09T17:53:36+00:00,2018-02-09T17:55:04+00:00,open,50.923851,-1.429329,Broken light
+Southampton,1227967,Street lighting,2018-02-25T22:49:18+00:00,2018-03-26T07:21:47+01:00,closed,50.941355,-1.451096,Lights out
+Southampton,1229088,Street lighting,2018-02-27T00:32:04+00:00,2018-02-28T09:39:45+00:00,open,50.940228,-1.453247,Various lights are out
+Southampton,1230202,Street lighting,2018-02-28T10:20:45+00:00,2018-02-28T10:25:06+00:00,open,50.919431,-1.390231,Street lights not working.
+Southampton,1236226,Street lighting,2018-03-07T19:14:39+00:00,2018-03-09T09:25:37+00:00,open,50.913296,-1.443553,2 lamp posts have lights out
+Southampton,1238132,Street lighting,2018-03-08T22:35:00+00:00,2018-03-08T22:35:10+00:00,open,50.91311,-1.443085,2 street lights not working
+Southampton,1245430,Street lighting,2018-03-14T20:17:27+00:00,2018-03-14T20:20:04+00:00,open,50.913164,-1.44386,Street Light not working by garage
+Southampton,1245436,Street lighting,2018-03-14T20:28:11+00:00,2018-03-14T20:30:07+00:00,open,50.940414,-1.44946,Street light not working
+Southampton,1246882,Street lighting,2018-03-15T19:30:44+00:00,2018-03-15T19:35:11+00:00,open,50.940574,-1.449798,Light out by garage
+Southampton,1250727,Street lighting,2018-03-19T20:39:06+00:00,2020-10-21T13:02:30+01:00,closed,50.89726,-1.400222,Lighting not working in most of Queen's Park
+Southampton,1257531,Street lighting,2018-03-26T06:56:56+01:00,2018-03-26T07:00:11+01:00,open,50.939587,-1.455034,Light not working
+Southampton,1271312,Street lighting,2018-04-06T14:45:28+01:00,2018-05-09T16:24:12+01:00,open,50.942161,-1.44965,Lights not working
+Southampton,1271321,Street lighting,2018-04-06T14:50:05+01:00,2018-06-07T09:22:46+01:00,closed,50.943696,-1.45171,Lights not working along Rownhams Road North
+Southampton,1338407,Street lighting,2018-06-13T07:43:39+01:00,2018-06-13T07:45:05+01:00,open,50.913758,-1.448317,Lighting in subway under Millbrook Road West not working
+Southampton,1392523,Street lighting,2018-08-20T21:31:20+01:00,2018-09-18T03:32:21+01:00,closed,50.922525,-1.347477,Street lights out
+Southampton,1411517,Street lighting,2018-09-12T21:39:48+01:00,2018-10-11T03:14:48+01:00,closed,50.928259,-1.364093,Light out
+Southampton,1419599,Street lighting,2018-09-22T09:52:42+01:00,2018-09-22T09:55:04+01:00,open,50.907326,-1.373807,Street light not working
+Southampton,1469198,Street lighting,2018-11-24T17:50:19+00:00,2018-11-24T17:55:05+00:00,open,50.943829,-1.451899,Street lighting not working from Menzies Close to Lordshill roundabout
+Southampton,1477103,Street lighting,2018-12-04T00:07:10+00:00,2019-01-01T01:01:55+00:00,closed,50.934081,-1.400733,Poor lighting on steps down from common path down to university
+Southampton,1477750,Street lighting,2018-12-04T15:20:43+00:00,2018-12-04T15:25:10+00:00,open,50.901805,-1.397762,Underpass lights off
+Southampton,1480296,Street lighting,2018-12-06T23:19:19+00:00,2019-01-03T23:39:22+00:00,closed,50.945017,-1.435653,Street lights not working
+Southampton,1481815,Street lighting,2018-12-08T16:53:04+00:00,2019-01-06T12:28:27+00:00,closed,50.914524,-1.356386,Lights in the pedestrian underpass
+Southampton,1532417,Street lighting,2019-02-04T21:09:11+00:00,2019-03-04T21:45:26+00:00,open,50.893244,-1.380972,Light been out for weeks
+Southampton,1544361,Street lighting,2019-02-14T20:07:03+00:00,2019-02-14T20:10:09+00:00,open,50.913329,-1.44333,Tall T Shaped light out
+Southampton,1547733,Street lighting,2019-02-18T13:36:23+00:00,2019-02-18T13:40:12+00:00,open,50.913338,-1.443092,Tall t light not working
+Southampton,1548169,Street lighting,2019-02-18T19:03:33+00:00,2019-02-18T19:05:12+00:00,open,50.913203,-1.442545,A tall light is out about for posts from the lights
+Southampton,1548173,Street lighting,2019-02-18T19:05:04+00:00,2019-02-18T19:10:06+00:00,open,50.913316,-1.443988,Street light out opposite garage
+Southampton,1554944,Street lighting,2019-02-25T19:30:00+00:00,2019-02-25T19:30:10+00:00,open,50.912635,-1.435679,Light not working opposite Solent business park
+Southampton,1555174,Street lighting,2019-02-26T07:42:20+00:00,2019-02-26T07:45:05+00:00,open,50.930532,-1.442276,Street light smashed
+Southampton,1703357,Street lighting,2019-07-20T22:41:16+01:00,2019-08-17T23:27:28+01:00,closed,50.921945,-1.363044,Street light failure
+Southampton,1727276,Street lighting,2019-08-10T13:52:07+01:00,2019-09-08T11:49:36+01:00,closed,50.932237,-1.387387,Fallen lamp post in Portswood Rec
+Southampton,1731187,Street lighting,2019-08-13T21:40:24+01:00,2019-09-22T16:24:50+01:00,open,50.914897,-1.44327,Street light not working
+Southampton,1735234,Street lighting,2019-08-17T12:41:00+01:00,2019-10-28T23:18:29+00:00,open,50.909341,-1.370834,Broken street lighting
+Southampton,1774395,Street lighting,2019-09-20T10:09:47+01:00,2019-10-18T17:36:23+01:00,closed,50.933532,-1.459181,Street Light has been out now for a week
+Southampton,1781330,Street lighting,2019-09-25T22:45:20+01:00,2019-10-23T23:00:39+01:00,closed,50.925453,-1.357643,Broken Street light
+Southampton,6361145,Street lighting,2024-08-15T15:57:14+01:00,2024-09-17T19:40:38+01:00,closed,50.898575,-1.349432,Street Light not Working
+Southampton,7807894,Street lighting,2025-07-04T13:00:42+01:00,2025-07-04T13:00:42+01:00,open,50.905912,-1.401301,Cover loose on lamp post
+Southampton,10046824,Street lighting,2026-09-03T21:37:53+01:00,2026-09-03T21:37:53+01:00,open,50.89389,-1.347117,Steer lights

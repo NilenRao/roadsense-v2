@@ -1,0 +1,96 @@
+# Lane A (data) settings. Column definitions are in schemas.md.
+paths:
+  raw_dir: data/raw              # git-ignored: API pulls with free text
+  processed_dir: data/processed
+
+cities:
+  # FixMyStreet Open311 agency ids and each council's own category names (checked 17 Oct 2026).
+  # Bournemouth (BCP, MapIt 152188) is left out: it takes no FixMyStreet reports. See DATA_GAPS.md.
+  Southampton:
+    code: SOU
+    osm_place: "Southampton, UK"
+    fms_agency: "2567"
+    fms_road_categories: [Potholes, Roads/highways, Pavements/footpaths]
+    fms_other_categories: [Street lighting]
+  Portsmouth:
+    code: POR
+    osm_place: "Portsmouth, UK"
+    fms_agency: "2657"
+    fms_road_categories: [Potholes, Roads/highways, Pavements/footpaths]
+    fms_other_categories: []
+  Brighton:
+    code: BRI
+    osm_place: "Brighton and Hove, UK"
+    fms_agency: "2614"
+    fms_road_categories: [Pavement and road repairs]
+    fms_other_categories: []
+
+fixmystreet:
+  base_url: https://www.fixmystreet.com/open311/v2/requests.json
+  user_agent: "SotonShip26 student hackathon (contact via team)"
+  first_year: 2008
+  pause_s: 1.5                   # between requests: be polite
+  # A report counts as a road-surface defect if its category is Potholes, or it is in one of these
+  # general road categories and its text mentions a surface word.
+  surface_categories: [Roads/highways, Pavement and road repairs]
+  surface_words: [pothole, pot hole, hole, crater, sunken, sinking, sink, tarmac, surface,
+                  crack, rut, raised, uneven, dip]
+  dedup_m: 20                    # same defect = same city, within 20 m ...
+  dedup_days: 30                 # ... and 30 days of an earlier kept report
+
+labels:
+  snap_m: 25                     # report -> nearest segment (lane B uses 15; snap_dist_m is stored)
+  frozen_year: 2026              # Jan-Oct 2026 = "frozen model" check only
+  windows:                       # agreed in STATUS.md; years inclusive
+    Southampton: {usable: [2015, 2019], train: [2015, 2017], test: [2018, 2019]}
+    Brighton:    {usable: [2008, 2025], train: [2008, 2022], test: [2023, 2025]}
+    Portsmouth:  {usable: [2008, 2025], train: [2008, 2025], test: null}
+
+osm:
+  # Tried in order: the main server is often full
+  overpass_urls: [https://overpass-api.de/api, https://maps.mail.ru/osm/tools/overpass/api]
+  timeout_s: 900                 # Overpass query + HTTP timeout (bus-route queries 504 at 240 s)
+  tries: 4
+  mapit_url: https://mapit.mysociety.org
+  # MapIt area id of each council (for ward boundaries: children of type UTW / MTW)
+  council_area: {Southampton: 2567, Portsmouth: 2657, Brighton: 2614}
+  # Fallback when MapIt's free quota runs out (429): ONS Open Geography Portal wards (OGL), same names
+  ons_wards_url: https://services1.arcgis.com/ESMARspQHYMw9BZ9/ArcGIS/rest/services/Wards_December_2024_Boundaries_UK_BGC/FeatureServer/0/query
+  ons_lad: {Southampton: E06000045, Portsmouth: E06000044, Brighton: E06000043}
+
+flood:
+  # Environment Agency Flood Map for Planning, rivers and sea (OGL), WFS checked 17 Oct 2026
+  wfs_url: https://environment.data.gov.uk/spatialdata/flood-map-for-planning-flood-zones/wfs
+  layer: "dataset-04532375-a198-476e-985e-0579a0a11b47:Flood_Zones_2_3_Rivers_and_Sea"
+  zone: FZ3                      # in_flood_area = segment midpoint inside a Flood Zone 3 polygon
+  buffer_m: 200
+  page: 1000
+
+load:
+  # DfT road traffic statistics (OGL): one AADF CSV per local authority
+  dft_url: https://storage.googleapis.com/dft-statistics/road-traffic/downloads/aadf/local_authority_id/dft_aadf_local_authority_id_{la}.csv
+  dft_la: {Southampton: 137, Portsmouth: 82, Brighton: 136}
+  # AADF is averaged over the city's TRAIN window (labels.windows), so test years stay unseen.
+  count_m: 100                   # segment on the same road within this distance of the point -> load_source = count
+  minor_count_m: 30              # unreferenced roads: nearest Minor count point within this distance -> count
+  # A class with no counted segments borrows from the next class in its list (then the Minor-point median)
+  class_fallback: {motorway_link: [motorway], trunk_link: [trunk], primary_link: [primary],
+                   secondary: [tertiary, primary], secondary_link: [secondary, tertiary],
+                   tertiary_link: [tertiary], unclassified: [residential], living_street: [residential],
+                   road: [residential], service: [residential]}
+  # ASSUMPTION: standard axles (ESAL) per vehicle, 4th-power-law style factors (not a council or DMRB figure)
+  esal_factors: {buses_and_coaches: 1.3, hgvs_2_rigid_axle: 0.4, hgvs_3_rigid_axle: 1.0,
+                 hgvs_4_or_more_rigid_axle: 1.5, hgvs_3_or_4_articulated_axle: 1.0,
+                 hgvs_5_articulated_axle: 2.0, hgvs_6_articulated_axle: 2.2, lgvs: 0.01}
+
+segments:
+  max_length_m: 200
+  bus_stop_m: 20                 # OSM bus stop within this distance -> bus_stop = true
+  junction_min_streets: 4        # crossroads or bigger (3-way meets are everywhere in the simplified graph)
+  junction_node_tags: [mini_roundabout, traffic_signals, motorway_junction]
+  main_road_highways: [primary, secondary, tertiary, primary_link, secondary_link, tertiary_link]
+  # owner = national_highways for these classes; everything else is council
+  national_highways_highways: [motorway, motorway_link]
+  # Rank used when OSM merges ways of different classes into one edge: the first match wins
+  highway_rank: [motorway, trunk, primary, secondary, tertiary, motorway_link, trunk_link, primary_link,
+                 secondary_link, tertiary_link, unclassified, residential, living_street, road, service]

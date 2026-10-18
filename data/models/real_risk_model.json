@@ -1,0 +1,44 @@
+{
+ "version": "plan-risk-v0.1",
+ "features": [
+  "log_esal_day",
+  "log_hgv_bus_aadf",
+  "bus_routes",
+  "bus_stop",
+  "junction",
+  "in_flood_area",
+  "length_m",
+  "highway_code",
+  "is_main_road",
+  "wx_rain_30d_mean",
+  "wx_freeze_thaw",
+  "wx_frost_hours",
+  "wx_rain_then_frost",
+  "wx_hot_days",
+  "rep_prev1",
+  "rep_prev2_3",
+  "rep_nb_prev1",
+  "rep_prev1_per_km",
+  "con_sites_3y",
+  "con_dwellings_3y",
+  "uw_carriageway_1y",
+  "uw_any_1y",
+  "uw_carriageway_2y",
+  "city_code"
+ ],
+ "city_categories": [
+  "Brighton",
+  "Portsmouth",
+  "Southampton"
+ ],
+ "trained_rows": 273793,
+ "trained_cities": [
+  "Brighton",
+  "Portsmouth",
+  "Southampton"
+ ],
+ "city_total_potholes_year": 3113.0,
+ "history_years": 3,
+ "history_source": "synthetic council log mapped by within-city rank to FixMyStreet 2015-19 counts",
+ "generated_at": "2026-10-18T07:20:16+00:00"
+}

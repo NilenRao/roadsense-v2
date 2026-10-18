@@ -1,0 +1,4 @@
+# LightGBM model files must keep LF line endings or they fail to load on Windows
+data/models/*.txt -text
+*.parquet binary
+*.pkl binary

@@ -1,0 +1,101 @@
+# Lane B: synthetic council data and model settings.
+# Every number here is an ASSUMPTION for the hackathon, not a council figure,
+# except the FOI pothole totals under potholes.yearly_totals.
+seed: 2026
+version: "1.0"
+city: Southampton            # synthetic council data, weekly risk and lights cover the target city only
+real_map_cities: [Brighton]  # map-only risk from the real-label model with real FixMyStreet history (no wear/lights/plan)
+as_of: "2026-10-12"          # Monday of the last complete week; generators stop here
+
+paths:
+  processed_dir: data/processed      # lane A outputs (segments, weekly weather, esal_day)
+  mock_dir: data/synthetic/mock_inputs
+  synthetic_dir: data/synthetic
+  models_dir: data/models
+  outputs_dir: outputs
+  reports_dir: reports
+
+# Used only when lane A outputs are not on disk yet.
+mock:
+  bbox: [-1.475, 50.875, -1.335, 50.960]   # lon_min, lat_min, lon_max, lat_max (Southampton)
+  n_wards: 17
+  segment_length_m: 75
+  grid_spacing_m: 240
+  highway_mix: {residential: 0.62, unclassified: 0.08, tertiary: 0.12, secondary: 0.08, primary: 0.07, trunk: 0.02, motorway: 0.01}
+  bus_stop_share: 0.06
+  junction_share: 0.25
+  flood_share: 0.08
+  esal_median_by_highway: {motorway: 4000, trunk: 2500, primary: 900, secondary: 300, tertiary: 90, unclassified: 15, residential: 8}
+  weather_start: "2016-01-04"
+
+road_class:   # osm highway -> resurfacing class used by Generator 1
+  A: [trunk, primary, trunk_link, primary_link]
+  BC: [secondary, tertiary, secondary_link, tertiary_link]
+  residential: [residential, unclassified, living_street, service, road]
+
+resurfacing:
+  age_max_years: {A: 15, BC: 25, residential: 40}
+  events_start: "2016-01-01"
+  n_events: 1500
+  treatment_mix: {surface_dressing: 0.60, crack_sealing: 0.25, full_resurfacing: 0.15}
+
+potholes:
+  start: "2021-01-04"
+  yearly_totals: {2021: 4002, 2022: 3972, 2023: 3627, 2024: 4162, 2025: 3113}   # real FOI (Blackcircles, Mar 2026)
+  current_year_rate_from: 2025          # 2026 to date at the 2025 rate
+  coef: {esal: 0.6, rain_30d_z: 0.5, freeze_thaw_14d: 0.4, rain_then_frost_7d: 0.8, age_years: 0.05, bus_stop: 0.3, junction: 0.3, in_flood_area: 0.4}
+  u_sd: 0.6
+  # ASSUMPTION: cap the raw weather counts in the hazard. Uncapped, a single cold snap (real Open-Meteo,
+  # Dec 2022: 20+ freeze-thaw crossings) multiplies hazard by e^8 and leaves almost no potholes outside winter.
+  weather_caps: {freeze_thaw_14d: 6, rain_then_frost_7d: 2}
+  prevention_multiplier: 0.6
+  prevention_years: 2
+  cluster_multiplier: 1.5
+  cluster_weeks: 8
+  neighbour_radius_m: 110
+  report_prob_range: [0.6, 0.95]
+  report_delay_days: [0, 21]
+  depth_mm_median: 45
+  depth_sigma: 0.4
+  width_mm_median: 300
+  width_sigma: 0.4
+  planned_share: 0.2
+  repair_days_reactive: [1, 28]
+  repair_days_planned: [14, 90]
+  jitter_m: 10
+  bisection_iters: 40
+
+streetlights:
+  osm_min_count: 5000
+  spacing_m: 35
+  led_share: 0.9
+  led_install_years: [2010, 2015]
+  legacy_install_years: [1995, 2009]
+  weibull: {LED: {scale_h: 60000, shape: 3.0}, legacy: {scale_h: 20000, shape: 2.5}}
+  random_fault_rate_per_year: 0.02
+  repair_days: [3, 20]
+  replacement_type: LED
+  faults_start: "2016-01-01"
+  switch_off: {start: "01:00", end: "05:30", from: "2023-12-01"}
+  lat: 50.9097
+  lon: -1.4044
+  dark_window_days: 30
+
+crew:
+  n_top: 200
+  n_random: 100
+  horizon_weeks: 4
+  cracking_scale: 2.0
+
+risk:
+  # Building sites and utility digs as inputs to the real-label model (team decision 18 Oct; held-out effect in
+  # reports/context_eval.md). false = the model before 18 Oct; the page still shows them as flags either way.
+  context_features: true
+  horizons: [7, 30]
+  label_radius_m: 15
+  holdout_months: 12
+  spatial_holdout_wards: 3
+  train_sample_neg_ratio: 20    # keep all positives and this many negatives per positive
+  top_frac: 0.05
+  forward_weeks: 4
+  lgbm: {n_estimators: 300, learning_rate: 0.05, num_leaves: 31, min_child_samples: 50, subsample: 0.8, subsample_freq: 1, colsample_bytree: 0.8, verbose: -1}

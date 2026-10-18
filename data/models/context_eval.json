@@ -1,0 +1,166 @@
+{
+ "generated_at": "2026-10-18T05:12:03+00:00",
+ "sets": {
+  "construction": {
+   "features": [
+    "con_sites_3y",
+    "con_dwellings_3y"
+   ],
+   "train_rows_with_values": 130796,
+   "cities": {
+    "Brighton": {
+     "base": 0.31224690268531013,
+     "with": 0.2934152810792748,
+     "diff": -0.018831621606035354,
+     "ci95": [
+      -0.039776313137166244,
+      0.0192586296716004
+     ],
+     "share_ahead": 0.25,
+     "reports": 802,
+     "segments": 8179,
+     "years": [
+      2023,
+      2024,
+      2025
+     ],
+     "stratified": {
+      "flagged_rows": 1704,
+      "flagged_with_report": 64,
+      "rate_flagged": 0.03755868544600939,
+      "rate_unflagged": 0.026803310997240835,
+      "mh_rate_ratio": 1.0878174395045472
+     }
+    },
+    "Southampton": {
+     "base": 0.4158361018826135,
+     "with": 0.3921188630490956,
+     "diff": -0.023717238833517895,
+     "ci95": [
+      -0.05091509375150537,
+      0.003821374045801529
+     ],
+     "share_ahead": 0.044,
+     "reports": 381,
+     "segments": 8145,
+     "years": [
+      2018,
+      2019
+     ],
+     "stratified": {
+      "flagged_rows": 245,
+      "flagged_with_report": 7,
+      "rate_flagged": 0.02857142857142857,
+      "rate_unflagged": 0.018884387659707073,
+      "mh_rate_ratio": 1.6837683768376837
+     }
+    }
+   },
+   "clear_gain": false,
+   "used_in_ranking": true,
+   "verdict": "in the model (team decision); no clear held-out gain yet"
+  },
+  "utility_works": {
+   "features": [
+    "uw_carriageway_1y",
+    "uw_any_1y",
+    "uw_carriageway_2y"
+   ],
+   "train_rows_with_values": 8179,
+   "cities": {
+    "Brighton": {
+     "base": 0.31224690268531013,
+     "with": 0.27431147224634683,
+     "diff": -0.0379354304389633,
+     "ci95": [
+      -0.06828372310752173,
+      -0.004599593924502528
+     ],
+     "share_ahead": 0.009,
+     "reports": 802,
+     "segments": 8179,
+     "years": [
+      2023,
+      2024,
+      2025
+     ],
+     "stratified": {
+      "flagged_rows": 5514,
+      "flagged_with_report": 312,
+      "rate_flagged": 0.056583242655059846,
+      "rate_unflagged": 0.019134731640645535,
+      "mh_rate_ratio": 2.0108475517811684
+     }
+    },
+    "Southampton": {
+     "status": "no data for this city's test years"
+    }
+   },
+   "clear_gain": false,
+   "used_in_ranking": true,
+   "verdict": "in the model (team decision); no clear held-out gain yet"
+  },
+  "both": {
+   "features": [
+    "con_sites_3y",
+    "con_dwellings_3y",
+    "uw_carriageway_1y",
+    "uw_any_1y",
+    "uw_carriageway_2y"
+   ],
+   "train_rows_with_values": 130796,
+   "cities": {
+    "Brighton": {
+     "base": 0.31224690268531013,
+     "with": 0.31832583453932384,
+     "diff": 0.006078931854013703,
+     "ci95": [
+      -0.021804957345773635,
+      0.03716580156759469
+     ],
+     "share_ahead": 0.701,
+     "reports": 802,
+     "segments": 8179,
+     "years": [
+      2023,
+      2024,
+      2025
+     ],
+     "stratified": {
+      "flagged_rows": 1704,
+      "flagged_with_report": 64,
+      "rate_flagged": 0.03755868544600939,
+      "rate_unflagged": 0.026803310997240835,
+      "mh_rate_ratio": 1.0878174395045472
+     }
+    },
+    "Southampton": {
+     "base": 0.4158361018826135,
+     "with": 0.3705703211517165,
+     "diff": -0.04526578073089699,
+     "ci95": [
+      -0.07385727322615093,
+      -0.011126974963539179
+     ],
+     "share_ahead": 0.002,
+     "reports": 381,
+     "segments": 8145,
+     "years": [
+      2018,
+      2019
+     ],
+     "stratified": {
+      "flagged_rows": 245,
+      "flagged_with_report": 7,
+      "rate_flagged": 0.02857142857142857,
+      "rate_unflagged": 0.018884387659707073,
+      "mh_rate_ratio": 1.6837683768376837
+     }
+    }
+   },
+   "clear_gain": false,
+   "used_in_ranking": true,
+   "verdict": "in the model (team decision); no clear held-out gain yet"
+  }
+ }
+}

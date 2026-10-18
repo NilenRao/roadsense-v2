@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RoadSense · Southampton</title>
+  <meta name="description" content="RoadSense: weekly pothole prevention plan, risk map and report triage for highways officers.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23141920'/%3E%3Cpath d='M11 25L14.5 7M21 25L17.5 7' stroke='%23fff' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M16 21v2M16 15v2M16 9v2' stroke='%23f9a825' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<a class="skip" href="#panel-body">Skip to the plan</a>
+<header>
+  <div class="brand">
+    <span class="mark" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 32 32"><path d="M10 28L14.5 4M22 28L17.5 4" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M16 22v3M16 14.5v3M16 7v3" stroke="#f9a825" stroke-width="3" stroke-linecap="round"/></svg></span>
+    <div><strong>RoadSense</strong> <span id="brand-sub" class="muted">Southampton highways · weekly prevention plan</span></div>
+  </div>
+  <div class="controls">
+    <label id="city-wrap" class="hidden">City <select id="city"></select></label>
+    <label id="ward-wrap">Ward <select id="ward"><option value="">All wards</option></select></label>
+    <label id="scenario-wrap">What-if <select id="scenario">
+      <option value="">This week's forecast</option>
+      <option value="rain_then_frost">Rain then frost</option>
+      <option value="wet_week">Wet week</option>
+      <option value="cold_snap">Cold snap</option>
+    </select></label>
+  </div>
+  <div class="status">
+    <span id="badges"></span>
+    <span id="data-updated" class="small"></span>
+    <a class="credit" href="https://open-meteo.com/" target="_blank" rel="noopener">Weather data by Open-Meteo.com</a>
+  </div>
+</header>
+<div id="stale" class="banner hidden" role="status"></div>
+<main>
+  <section id="panel">
+    <nav class="tabs" aria-label="Views">
+      <button data-tab="plan" class="active">Prevention plan</button>
+      <button data-tab="triage">Report triage <span id="qcount" class="pill"></span></button>
+      <button data-tab="lights">Streetlights</button>
+    </nav>
+    <div id="panel-body" class="panel-body" tabindex="-1">
+    <div id="city-note" class="card hidden"></div>
+    <div id="tab-plan" class="tab">
+      <nav class="subtabs" aria-label="Plan view">
+        <button data-view="all" class="active">All roads</button>
+        <button data-view="worth">Worth treating <span id="worth-count" class="pill ok"></span></button>
+      </nav>
+      <p id="worth-head" class="worth-head hidden"></p>
+      <p id="plan-head" class="muted">Loading the plan…</p>
+      <div id="movers"></div>
+      <table id="plan-table" class="rows"><thead><tr><th>#</th><th>Segment</th><th>Urgency</th><th>Treatment</th><th>Value</th></tr></thead>
+        <tbody id="plan-rows">
+          <tr class="sk"><td><span></span></td><td><span></span><span></span></td><td><span></span></td><td><span></span></td><td><span></span></td></tr>
+          <tr class="sk"><td><span></span></td><td><span></span><span></span></td><td><span></span></td><td><span></span></td><td><span></span></td></tr>
+          <tr class="sk"><td><span></span></td><td><span></span><span></span></td><td><span></span></td><td><span></span></td><td><span></span></td></tr>
+        </tbody></table>
+      <div id="inspect" class="hidden">
+        <p id="inspect-head" class="muted"></p>
+        <table class="rows"><thead><tr><th>#</th><th>Segment</th><th>Urgency</th><th>Action</th></tr></thead>
+          <tbody id="inspect-rows"></tbody></table>
+      </div>
+    </div>
+    <div id="tab-triage" class="tab hidden">
+      <form id="triage-form">
+        <label>Real FixMyStreet report <select id="fms-pick"></select></label>
+        <label class="small">Photo (optional) <input type="file" id="photo" accept="image/*"></label>
+        <button type="submit" class="primary">Triage report</button>
+        <button type="button" id="dup-btn" title="Submit the same real report again as a second resident would">Re-submit (duplicate)</button>
+      </form>
+      <p id="triage-err" class="error hidden" role="alert"></p>
+      <p id="triage-note" class="muted small">Only public FixMyStreet text and photos of public roads are sent to Gemini. Dangerous road conditions:
+        <a id="official-link" target="_blank" rel="noopener">report to Southampton City Council</a>.</p>
+      <div id="queue"></div>
+      <div id="city-triage" class="hidden"></div>
+    </div>
+    <div id="tab-lights" class="tab hidden">
+      <p id="lights-head" class="muted"></p>
+      <label class="check"><input type="checkbox" id="dark-only"> Currently dark only</label>
+      <table class="rows"><thead><tr><th>Lamp</th><th>Street</th><th>P(fail 90 d)</th><th>Replace by</th><th></th></tr></thead>
+        <tbody id="light-rows"></tbody></table>
+    </div>
+    </div>
+  </section>
+  <div id="resizer" role="separator" aria-orientation="vertical" aria-label="Resize the side panel" aria-controls="panel"
+       tabindex="0" title="Drag to resize. Double-click to reset."></div>
+  <section id="mapwrap" aria-label="Map">
+    <div id="map"></div>
+    <div class="legend">
+      <span><i class="critical"></i><b class="lg">Critical 90+</b></span>
+      <span><i class="high"></i><b class="lg">High 70-89</b></span>
+      <span><i class="prevention"></i><b class="lg">Prevention 40-69</b></span>
+      <span><i class="monitor"></i><b class="lg">Monitor</b></span>
+      <span><i class="grey"></i>National Highways</span>
+      <span><i class="dot"></i>Open FixMyStreet report</span>
+      <span><i class="site"></i>Building site</span>
+    </div>
+    <aside id="detail" class="hidden" aria-live="polite"></aside>
+  </section>
+</main>
+<footer>
+  <details>
+    <summary><span class="fold">Data sources and licences</span>
+      <span class="attrib">Map © OpenStreetMap contributors · <a class="credit" href="https://open-meteo.com/" target="_blank" rel="noopener">Weather data by Open-Meteo.com</a></span></summary>
+    <div id="sources"></div>
+  </details>
+</footer>
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

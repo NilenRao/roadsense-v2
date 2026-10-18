@@ -1,0 +1,206 @@
+{
+ "generated_at": "2026-10-18T07:22:18+00:00",
+ "test": {
+  "Southampton": {
+   "model": {
+    "point": 0.3705703211517165,
+    "ci95": [
+     0.2806701899224754,
+     0.48665747869195825
+    ]
+   },
+   "baseline": {
+    "point": 0.3368401624215578,
+    "ci95": [
+     0.23074107142857145,
+     0.40123698203900793
+    ]
+   },
+   "diff": {
+    "point": 0.03373015873015872,
+    "ci95": [
+     -0.01335462030088899,
+     0.14332516261506187
+    ]
+   },
+   "share_model_beats_baseline": 0.94,
+   "n": {
+    "reports": 381,
+    "segments": 8145,
+    "wards": 17,
+    "years": [
+     2018,
+     2019
+    ],
+    "resamples": 1000,
+    "seed": 2026
+   }
+  },
+  "Brighton": {
+   "model": {
+    "point": 0.31832583453932384,
+    "ci95": [
+     0.2867754936535702,
+     0.35750083602823673
+    ]
+   },
+   "baseline": {
+    "point": 0.21684940914903858,
+    "ci95": [
+     0.17914482969638745,
+     0.2658633837137704
+    ]
+   },
+   "diff": {
+    "point": 0.10147642539028526,
+    "ci95": [
+     0.053437774661674146,
+     0.14674966185458108
+    ]
+   },
+   "share_model_beats_baseline": 1.0,
+   "n": {
+    "reports": 802,
+    "segments": 8179,
+    "wards": 23,
+    "years": [
+     2023,
+     2024,
+     2025
+    ],
+    "resamples": 1000,
+    "seed": 2026
+   }
+  }
+ },
+ "frozen_2026": {
+  "Southampton": {
+   "model": {
+    "point": 0.21212121212121213,
+    "ci95": [
+     0.09512987012987013,
+     0.3226043643263757
+    ]
+   },
+   "baseline": {
+    "point": 0.12121212121212122,
+    "ci95": [
+     0.02939075630252101,
+     0.27599676724137917
+    ]
+   },
+   "diff": {
+    "point": 0.09090909090909091,
+    "ci95": [
+     -0.08333333333333334,
+     0.19357078853046594
+    ]
+   },
+   "share_model_beats_baseline": 0.786,
+   "n": {
+    "reports": 33,
+    "segments": 8145,
+    "wards": 17,
+    "years": [
+     2026
+    ],
+    "resamples": 1000,
+    "seed": 2026
+   }
+  },
+  "Brighton": {
+   "model": {
+    "point": 0.3,
+    "ci95": [
+     0.15384615384615385,
+     0.47830434782608694
+    ]
+   },
+   "baseline": {
+    "point": 0.16666666666666666,
+    "ci95": [
+     0.02775900900900901,
+     0.29411764705882354
+    ]
+   },
+   "diff": {
+    "point": 0.13333333333333333,
+    "ci95": [
+     0.0,
+     0.35139109697933224
+    ]
+   },
+   "share_model_beats_baseline": 0.961,
+   "n": {
+    "reports": 30,
+    "segments": 8179,
+    "wards": 23,
+    "years": [
+     2026
+    ],
+    "resamples": 1000,
+    "seed": 2026
+   }
+  }
+ },
+ "top_features": {
+  "Southampton": [
+   {
+    "feature": "length_m",
+    "share": 0.23982052965205836,
+    "plain": "Length of the road segment (longer pieces have more surface to fail)"
+   },
+   {
+    "feature": "wx_rain_30d_mean",
+    "share": 0.15305298795930086,
+    "plain": "How wet the area was last year"
+   },
+   {
+    "feature": "city_code",
+    "share": 0.14137806521301963,
+    "plain": "Which city (reporting habits differ between cities)"
+   },
+   {
+    "feature": "rep_nb_prev1",
+    "share": 0.07421044875170119,
+    "plain": "Potholes reported on the neighbouring roads last year"
+   },
+   {
+    "feature": "con_dwellings_3y",
+    "share": 0.06520395838373128,
+    "plain": "New homes permitted within 150 m in the last 3 years"
+   }
+  ],
+  "Brighton": [
+   {
+    "feature": "length_m",
+    "share": 0.23936028086711555,
+    "plain": "Length of the road segment (longer pieces have more surface to fail)"
+   },
+   {
+    "feature": "wx_rain_30d_mean",
+    "share": 0.15121807186743016,
+    "plain": "How wet the area was last year"
+   },
+   {
+    "feature": "rep_nb_prev1",
+    "share": 0.07300175879461072,
+    "plain": "Potholes reported on the neighbouring roads last year"
+   },
+   {
+    "feature": "bus_routes",
+    "share": 0.06609682233441927,
+    "plain": "Number of bus routes using the road"
+   },
+   {
+    "feature": "wx_frost_hours",
+    "share": 0.05803129989035782,
+    "plain": "Frost hours in the area last year"
+   }
+  ]
+ },
+ "frozen_sentences": [
+  "Southampton: only 33 reports in January to October 2026, too few for this result to mean anything (model 21% vs baseline 12%).",
+  "Brighton: only 30 reports in January to October 2026, too few for this result to mean anything (model 30% vs baseline 17%)."
+ ]
+}

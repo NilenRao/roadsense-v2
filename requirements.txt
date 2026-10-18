@@ -1,0 +1,31 @@
+# RoadSense: packages the code on main imports (Python 3.11).
+# Versions are the ones the tests pass with; pinned with >= so pip can resolve on other machines.
+
+# Data and geometry
+numpy>=2.4.6
+pandas>=2.3.3
+pyarrow>=26.0.0          # parquet engine for pandas
+pyyaml>=6.0.3            # config.yaml, config/synthetic.yaml
+scipy>=1.17.1
+shapely>=2.2.0
+geopandas>=1.2.0
+osmnx>=2.1.1             # lane A: OpenStreetMap road network
+
+# Models (lane B)
+scikit-learn>=1.9.1
+lightgbm>=4.7.0
+lifelines>=0.30.3        # Weibull survival (wear, streetlights)
+shap>=0.51.0
+astral>=3.2              # sunset/sunrise for streetlight burn hours
+tzdata>=2026.5           # Europe/London time zone on Windows
+matplotlib>=3.11.2       # calibration plot
+
+# Tests
+pytest>=9.1.1
+
+# Product (lane C): API, officer page, report triage
+fastapi>=0.143.3
+uvicorn[standard]>=0.54.0
+google-genai>=2.31.0     # Gemini triage
+python-dotenv>=1.2.4     # reads GEMINI_API_KEY from .env
+httpx>=0.28.1            # FastAPI TestClient in tests
