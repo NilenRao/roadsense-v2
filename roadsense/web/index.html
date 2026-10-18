@@ -4,104 +4,130 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RoadSense · Southampton</title>
-  <meta name="description" content="RoadSense: weekly pothole prevention plan, risk map and report triage for highways officers.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23141920'/%3E%3Cpath d='M11 25L14.5 7M21 25L17.5 7' stroke='%23fff' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M16 21v2M16 15v2M16 9v2' stroke='%23f9a825' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <meta name="description" content="RoadSense: which roads to fix this week, why, and whether fixing now is cheaper than waiting.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23FFC72C'/%3E%3Cpath d='M11 25L14 7M21 25L18 7' stroke='%231F2326' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M16 21v2M16 15v2M16 9v2' stroke='%231F2326' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-<a class="skip" href="#panel-body">Skip to the plan</a>
-<header>
+<a class="skip" href="#panel">Skip to this week's plan</a>
+
+<header class="top">
   <div class="brand">
-    <span class="mark" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 32 32"><path d="M10 28L14.5 4M22 28L17.5 4" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M16 22v3M16 14.5v3M16 7v3" stroke="#f9a825" stroke-width="3" stroke-linecap="round"/></svg></span>
-    <div><strong>RoadSense</strong> <span id="brand-sub" class="muted">Southampton highways · weekly prevention plan</span></div>
+    <span class="mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M8 3 5 21M16 3l3 18M12 5v2M12 11v2M12 17v2"/></svg></span>
+    <span class="name">RoadSense</span>
   </div>
-  <div class="controls">
-    <label id="city-wrap" class="hidden">City <select id="city"></select></label>
-    <label id="ward-wrap">Ward <select id="ward"><option value="">All wards</option></select></label>
-    <label id="scenario-wrap">What-if <select id="scenario">
-      <option value="">This week's forecast</option>
-      <option value="rain_then_frost">Rain then frost</option>
-      <option value="wet_week">Wet week</option>
-      <option value="cold_snap">Cold snap</option>
-    </select></label>
+  <div id="city-toggle" class="seg hidden" role="group" aria-label="City"></div>
+  <div class="search" role="search">
+    <label for="search" class="sr">Find a road</label>
+    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="search" type="search" placeholder="Name a road…" autocomplete="off" aria-controls="search-results" aria-expanded="false">
+    <ul id="search-results" class="results hidden" role="listbox" aria-label="Matching roads"></ul>
   </div>
-  <div class="status">
-    <span id="badges"></span>
-    <span id="data-updated" class="small"></span>
-    <a class="credit" href="https://open-meteo.com/" target="_blank" rel="noopener">Weather data by Open-Meteo.com</a>
-  </div>
+  <button id="demo-open" class="ghost" type="button">Name-a-road mode</button>
+  <span id="updated" class="updated"></span>
 </header>
+
 <div id="stale" class="banner hidden" role="status"></div>
+
 <main>
-  <section id="panel">
-    <nav class="tabs" aria-label="Views">
-      <button data-tab="plan" class="active">Prevention plan</button>
-      <button data-tab="triage">Report triage <span id="qcount" class="pill"></span></button>
-      <button data-tab="lights">Streetlights</button>
-    </nav>
-    <div id="panel-body" class="panel-body" tabindex="-1">
-    <div id="city-note" class="card hidden"></div>
-    <div id="tab-plan" class="tab">
-      <nav class="subtabs" aria-label="Plan view">
-        <button data-view="all" class="active">All roads</button>
-        <button data-view="worth">Worth treating <span id="worth-count" class="pill ok"></span></button>
-      </nav>
-      <p id="worth-head" class="worth-head hidden"></p>
-      <p id="plan-head" class="muted">Loading the plan…</p>
-      <div id="movers"></div>
-      <table id="plan-table" class="rows"><thead><tr><th>#</th><th>Segment</th><th>Urgency</th><th>Treatment</th><th>Value</th></tr></thead>
-        <tbody id="plan-rows">
-          <tr class="sk"><td><span></span></td><td><span></span><span></span></td><td><span></span></td><td><span></span></td><td><span></span></td></tr>
-          <tr class="sk"><td><span></span></td><td><span></span><span></span></td><td><span></span></td><td><span></span></td><td><span></span></td></tr>
-          <tr class="sk"><td><span></span></td><td><span></span><span></span></td><td><span></span></td><td><span></span></td><td><span></span></td></tr>
-        </tbody></table>
-      <div id="inspect" class="hidden">
-        <p id="inspect-head" class="muted"></p>
-        <table class="rows"><thead><tr><th>#</th><th>Segment</th><th>Urgency</th><th>Action</th></tr></thead>
-          <tbody id="inspect-rows"></tbody></table>
-      </div>
+  <section id="panel" tabindex="-1" aria-live="polite">
+
+    <!-- 1. This week's plan -->
+    <div id="view-plan" class="view">
+      <h1 id="plan-title">This week's plan</h1>
+      <p id="plan-sub" class="sub">Loading…</p>
+      <div id="filters" class="chips" role="tablist" aria-label="Filter roads"></div>
+      <ol id="plan-list" class="road-list">
+        <li class="sk"></li><li class="sk"></li><li class="sk"></li>
+      </ol>
+      <button id="to-triage" class="cta" type="button">
+        <span class="dot-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H8l-4 4z"/></svg></span>
+        <span class="cta-text"><b>New resident reports <span id="qcount" class="count"></span></b><span>AI drafts the work orders. You decide.</span></span>
+        <span class="cta-go" aria-hidden="true">Check →</span>
+      </button>
+      <details class="more">
+        <summary>More options</summary>
+        <div class="more-body">
+          <label>Ward <select id="ward"><option value="">All wards</option></select></label>
+          <label>What if the weather turns? <select id="scenario">
+            <option value="">This week's forecast</option>
+            <option value="rain_then_frost">Rain then frost</option>
+            <option value="wet_week">Wet week</option>
+            <option value="cold_snap">Cold snap</option>
+          </select></label>
+          <button id="to-lights" class="link" type="button">Streetlights due for replacement →</button>
+        </div>
+      </details>
     </div>
-    <div id="tab-triage" class="tab hidden">
-      <form id="triage-form">
-        <label>Real FixMyStreet report <select id="fms-pick"></select></label>
+
+    <!-- 2. Road card -->
+    <div id="view-road" class="view hidden"></div>
+
+    <!-- 4. Report triage -->
+    <div id="view-triage" class="view hidden">
+      <button class="back" type="button" data-back>← This week's plan</button>
+      <h1>Resident reports</h1>
+      <p class="sub">AI reads each report and drafts the job. Nothing reaches a crew until you approve it.</p>
+      <form id="triage-form" class="step-card">
+        <span class="step">1 · Pick a real report</span>
+        <label>FixMyStreet report <select id="fms-pick"></select></label>
         <label class="small">Photo (optional) <input type="file" id="photo" accept="image/*"></label>
-        <button type="submit" class="primary">Triage report</button>
-        <button type="button" id="dup-btn" title="Submit the same real report again as a second resident would">Re-submit (duplicate)</button>
+        <div class="row">
+          <button type="submit" class="primary">Read it with AI</button>
+          <button type="button" id="dup-btn" class="ghost-dark" title="Send the same report again, as a second resident would">Send again (duplicate)</button>
+        </div>
+        <p class="small muted">Only public FixMyStreet text and photos of public roads are sent to Gemini. Names and contact details are never sent.
+          Dangerous road? <a id="official-link" target="_blank" rel="noopener">Report it to the council</a>.</p>
       </form>
       <p id="triage-err" class="error hidden" role="alert"></p>
-      <p id="triage-note" class="muted small">Only public FixMyStreet text and photos of public roads are sent to Gemini. Dangerous road conditions:
-        <a id="official-link" target="_blank" rel="noopener">report to Southampton City Council</a>.</p>
       <div id="queue"></div>
       <div id="city-triage" class="hidden"></div>
     </div>
-    <div id="tab-lights" class="tab hidden">
-      <p id="lights-head" class="muted"></p>
-      <label class="check"><input type="checkbox" id="dark-only"> Currently dark only</label>
-      <table class="rows"><thead><tr><th>Lamp</th><th>Street</th><th>P(fail 90 d)</th><th>Replace by</th><th></th></tr></thead>
-        <tbody id="light-rows"></tbody></table>
-    </div>
+
+    <!-- Streetlights -->
+    <div id="view-lights" class="view hidden">
+      <button class="back" type="button" data-back>← This week's plan</button>
+      <h1>Streetlights</h1>
+      <p id="lights-head" class="sub"></p>
+      <label class="check"><input type="checkbox" id="dark-only"> Only lights that are dark now</label>
+      <ol id="light-list" class="road-list"></ol>
     </div>
   </section>
-  <div id="resizer" role="separator" aria-orientation="vertical" aria-label="Resize the side panel" aria-controls="panel"
-       tabindex="0" title="Drag to resize. Double-click to reset."></div>
+
   <section id="mapwrap" aria-label="Map">
     <div id="map"></div>
-    <div class="legend">
-      <span><i class="critical"></i><b class="lg">Critical 90+</b></span>
-      <span><i class="high"></i><b class="lg">High 70-89</b></span>
-      <span><i class="prevention"></i><b class="lg">Prevention 40-69</b></span>
-      <span><i class="monitor"></i><b class="lg">Monitor</b></span>
-      <span><i class="grey"></i>National Highways</span>
-      <span><i class="dot"></i>Open FixMyStreet report</span>
-      <span><i class="site"></i>Building site</span>
+    <div class="legend" aria-label="Map key">
+      <span><i class="ln critical"></i>Very likely to break</span>
+      <span><i class="ln high"></i>Likely to break</span>
+      <span><i class="ln prevention"></i>Worth watching</span>
+      <span><i class="ln monitor"></i>Low risk</span>
+      <span><i class="ln grey"></i>National Highways (not council)</span>
+      <span><i class="pt report"></i>Open resident report</span>
+      <span><i class="pt site"></i>Building site</span>
     </div>
-    <aside id="detail" class="hidden" aria-live="polite"></aside>
   </section>
 </main>
+
+<!-- 3. Name-a-road mode -->
+<div id="demo" class="demo hidden" role="dialog" aria-modal="true" aria-labelledby="demo-title">
+  <div class="demo-inner">
+    <button class="demo-close" type="button" aria-label="Close name-a-road mode">×</button>
+    <h2 id="demo-title">Name a road</h2>
+    <p class="demo-sub">Any street in <span id="demo-city">Southampton</span>. We'll tell you if it's next, and why.</p>
+    <div class="demo-search">
+      <label for="demo-input" class="sr">Road name</label>
+      <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="demo-input" type="text" placeholder="e.g. Castle Road" autocomplete="off">
+    </div>
+    <ul id="demo-matches" class="demo-matches"></ul>
+    <section id="demo-answer" class="demo-answer hidden" aria-live="polite"></section>
+  </div>
+</div>
+
 <footer>
   <details>
     <summary><span class="fold">Data sources and licences</span>

@@ -7,7 +7,18 @@ treatment and its cost logic for an officer to approve. A "Worth treating" view 
 treatment costs less than the reactive repairs it avoids, plus every road with a confirmed pothole. Gemini
 triages public FixMyStreet reports into draft work orders. A Brighton map shows the same model on 100% real inputs.
 
-Built in 24 hours at SotonShip26 (AI Society, Eagle Labs Southampton), Southampton City track.
+Built in 24 hours at SotonShip26 (AI Society, Eagle Labs Southampton), Southampton City track, by team Myriad
+(Nilen Rao, Aryan Patel, Armaan Fernandes).
+
+> **This is the post-hackathon version, not the submission.** The code judged at SotonShip26 is
+> [ArmaanF-dot/Pothole-simulator-](https://github.com/ArmaanF-dot/Pothole-simulator-) (main @ `732a5f3`). This repo
+> starts from that code and redesigns the officer page (`roadsense/web/`) around four screens:
+> 1. **This week's plan**: every road gets a plain-English reason and one verdict (Fix now / Wait / Recently fixed).
+> 2. **Road card**: why it's on the list, fix now (£57) vs wait (£88), and a "What we don't know" box for stand-in data.
+> 3. **Name-a-road mode**: type any street and get three answers: is it on the list, why, and fix now or wait.
+> 4. **Report triage**: what the resident sent → what the AI understood → you decide.
+>
+> The API, models, data and numbers are unchanged; the page only re-words and re-lays out what the API returns.
 
 ## What it does
 
